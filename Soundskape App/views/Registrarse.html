@@ -1,0 +1,118 @@
+<div class="signup-page">
+    <div class="signup-box">
+        <div class="logo">
+            <a href="#/Principal">Soundskape<b> Radio</b></a>
+            <small>Proyecto - Industria del Software</small>
+        </div>
+        <div class="card">
+            <div class="body">
+                <form id="sign_up">
+                    <div class="msg">Registro de nuevo usuario</div>
+                    
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">person</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="namesurname" ng-model="namesurname" placeholder="Nombre de usuario" required autofocus>
+                        </div>
+                        
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">person</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="firstname" ng-model="firstname" placeholder="Primer Nombre" required autofocus>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">person</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="secondname" ng-model="secondname" placeholder="Segundo Nombre">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">person</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="firstlastname" ng-model="firstlastname" placeholder="Primer Apellido" required autofocus>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">person</i>
+                        </span>
+                        <div class="form-line">
+                         <input type="text" class="form-control" name="secondlastname" ng-model="secondlastname" placeholder="Segundo Apellido">
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">email</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="email" class="form-control" name="email" ng-model="email" placeholder="Correo electrónico" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">room</i>
+                        </span>
+                                <div class="form-line"> 
+                                    <select class="form-control" name="city" ng-model="city">
+                                        <option class="placeholder" selected disabled value="">Seleccione Ciudad</option>
+                                        <option ng-repeat="x in cities">{{x.ciudad}}</option>
+                                      
+                                    </select>
+                                </div>
+                    </div>
+                    <div class="input-group">
+                            <span class="input-group-addon">
+                            <i class="material-icons">event</i>
+                        </span>
+                            <div class="form-line">
+                                    <input type="date" name="borndate" ng-model="borndate" class="form-control" placeholder="Please choose a date...">
+                            </div>
+                           
+                     </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">lock</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="password" class="form-control" name="password" id="pass" minlength="6" ng-model="password" placeholder="Contraseña" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">lock</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="password" class="form-control" name="confirm" minlength="6" ng-model="confirm" placeholder="Confirma contraseña" required>
+                        </div>
+                        
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="terms" id="terms" ng-model="terms" class="filled-in chk-col-pink">
+                        <label for="terms">Si, he leído y acepto los <a href="javascript:void(0);">Términos y condiciones</a>.</label>
+                    </div>
+
+                    <button class="btn btn-block btn-lg bg-light-green" ng-click='insertuser()' type="submit">Registrarme</button>
+
+                    <div class="m-t-25 m-b--5 align-center">
+                        <a href="#/InicioSesion">Clic aquí, si tienes cuenta con nosotros</a><br>
+                    </div>
+                    <div class=" align-center">
+                    <a href="#/Principal" style="color:green;">Volver al inicio</a>
+                    </div>
+                    <p style="color:red;">{{messageconfirm}}</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
