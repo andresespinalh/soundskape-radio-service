@@ -18,8 +18,8 @@ $outp = "";
 while($rs = $result->fetch_array(MYSQLI_ASSOC)) { //Guarda en rs cada resultado de la fila 
 
     if ($outp != "") {$outp .= ",";}
-    $rs["nombre_artistico"] = preg_replace("/[^a-zA-Z0-9_.'()]/", '', $rs["nombre_artistico"]);// Eliminacion de caracteres especiales 
-    $rs["titulo"] = preg_replace("/[^a-zA-Z0-9_.'()]/", '', $rs["titulo"]);
+    $rs["nombre_artistico"] = preg_replace("/[^a-zA-Z0-9_.'()]/", ' ', $rs["nombre_artistico"]);// Eliminacion de caracteres especiales 
+    $rs["titulo"] = preg_replace("/[^a-zA-Z0-9_.'()]/", ' ', $rs["titulo"]);
     
 
     $outp .= '{"id_cancion":"'  . $rs["id_cancion"] . '",';
