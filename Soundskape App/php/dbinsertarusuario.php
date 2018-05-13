@@ -19,7 +19,18 @@ $now = date('Y-m-d'); //Fecha de hoy
 
 
 //Insercion en la tabla persona
-$conexion->query( "call insertperson ( '$firstname','$secondname','$firstlastname','$secondlastname','$email','$borndate','$city')");
+$conexion->query( "INSERT INTO persona (primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,correo_electronico,fecha_nacimiento,id_ciudad
+)VALUES (				'$firstname', 
+						'$secondname', 
+						'$firstlastname', 
+						'$secondlastname',
+						'$email',
+						'$borndate',
+						(select c.id_ciudad
+						 from ciudad c 
+						 where c.ciudad='$city')
+);");
+
 
 $conexion = conectar();//reinicia la conexión
 
